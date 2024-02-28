@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gadget & Trust</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/20c7659e38.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="bg-[#0D6EFD0D]">
+      <div class="navbar px-[150px] pt-4 justify-center items-center">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+          </div>
+          <a class="btn btn-ghost text-xl font-bold">Gadget & Trust</a>
+        </div>
+        <div class="navbar-end">
+          <button class="btn btn-accent rounded text-white">Sign Up</button>
+        </div>
+      </div>
+      <div class="flex flex-col items-center px-[290px] mt-[30px]">
+        <h1
+          class="text-[#100F0F] text-[75px] font-bold leading-[98px] text-nowrap mb-6"
+        >
+          Iphone 15 Pro Max
+        </h1>
+        <p
+          class="text-[#706F6F] text-center text-lg font-normal leading-[30px] mb-8"
+        >
+          The iPhone 15 Pro Max represents the epitome of sophistication,
+          seamlessly blending cutting-edge technology with unparalleled
+          performance and style, elevating the mobile experience to
+          unprecedented heights.
+        </p>
+        <div class="text-center">
+          <button
+            class="btn btn-primary text-white text-xl font-bold leading-[30px]"
+          >
+            Buy Now
+          </button>
+          <img
+            class="relative top-[100px] rounded"
+            src="images/i-phone-15-pro-max-at-apple-event.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+    <main class="mt-[213px] w-full">
+      <div class="text-center">
+        <h2
+          class="text-[#100F0F] text-[35px] font-semibold leading-[53px] mb-7"
+        >
+          Search Your Phone
+        </h2>
+        <div
+          class="flex h-[52px] w-[752px] mx-auto border-2 justify-between items-center bg-[#100F0F0D] mb-20 rounded-lg"
+        >
+          <div class="ml-5 text-[#706F6F] flex gap-3 items-center">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              id="input-field"
+              class="bg-[#100F0F0D] pl-3 focus:outline-none rounded-lg"
+              type="text"
+              placeholder="Search here..."
+            />
+          </div>
+          <button
+            onclick="searchData()"
+            class="btn btn-primary text-white text-xl"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <div id="loader" class="w-full text-center hidden">
+        <span class="loading loading-spinner loading-lg"></span>
+      </div>
+      <section
+        id="phone-section"
+        class="grid grid-cols-3 gap-4 mx-4 mb-20"
+      ></section>
+      <div id="no-data-container"></div>
+      <div id="show-all-button" class="text-center hidden mb-20">
+        <button class="btn btn-active btn-primary">Show All</button>
+      </div>
+
+      <!-- modal -->
+      <div>
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- Open the modal using ID.showModal() method -->
+
+        <dialog id="show_details_modal" class="modal">
+          <div class="modal-box">
+            <div
+              id="phone-img"
+              class="w-full flex justify-center bg-[#0D6EFD1A] rounded-xl"
+            ></div>
+            <div id="mobile-information"></div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="js/utils.js"></script>
+  </body>
+</html>
